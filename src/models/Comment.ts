@@ -2,7 +2,7 @@ export interface CommentDB {
     id: string,
     post_id: string,
     creator_id: string,
-    content: string,
+    conten: string,
     votes_count: number,
     created_at: string
   }
@@ -10,7 +10,7 @@ export interface CommentDB {
   export interface CommentModel {
     id: string,
     postId: string,
-    content: string,
+    conten: string,
     votesCount: number,
     createdAt: string,
     creator: {
@@ -29,7 +29,7 @@ export interface CommentDB {
     constructor(
       private id: string,
       private postId: string,
-      private content: string,
+      private conten: string,
       private votesCount: number,
       private createdAt: string,
       private creatorId: string,
@@ -53,11 +53,11 @@ export interface CommentDB {
       }
   
       public getContent(): string {
-        return this.content
+        return this.conten
       }
   
       public setContent(value: string): void {
-        this.content = value
+        this.conten = value
       }
   
       public getVotesCount(): number {
@@ -105,7 +105,7 @@ export interface CommentDB {
           id: this.id,
           post_id: this.postId,
           creator_id: this.creatorId,
-          content: this.content,
+          conten: this.conten,
           votes_count: this.votesCount,
           created_at: this.createdAt
         }
@@ -115,7 +115,7 @@ export interface CommentDB {
         return {
           id: this.id,
           postId: this.postId,
-          content: this.content,
+          conten: this.conten,
           votesCount: this.votesCount,
           createdAt: this.createdAt,
           creator: {
